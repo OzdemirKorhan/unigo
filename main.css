@@ -43,13 +43,27 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
     isolation: isolate;
 }
+
+.purpose-title, .textarea-title, .textarea-text span, .purpose-text span, .contact-title, .title, .buttons .btn{
+    font-family: "adobeArabic", serif;
+    color: #2f4c8e;
+}
+.purpose-text, .textarea-text, .contact-text, .form-group label, .form-control::placeholder, .form-group .text, .info{
+    font-family: "futuraPT", serif;
+    color: #474747;
+}
 .hero{
     padding: 2rem 3rem;
     height:80vh;
-    background-image: url("./assets/img/hero.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+}
+#background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
 }
 .navbar{
     display: flex;
@@ -62,7 +76,6 @@ p, h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     border-radius: 0;
     align-self: flex-end;
-    visibility: hidden;
 }
 .navbar .logo{
     height: 2.5rem;
@@ -87,20 +100,46 @@ p, h1, h2, h3, h4, h5, h6 {
 .hero-text > h1{
   font-size:4.5rem;
 }
+.open-menu{
+    background-color: rgba(17,71,127,0.6);
+    width:100%;
+    height:80vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:2;
+    padding:2rem 3rem;
+}
+.open-menu .close-button{
+    background-image: url("./assets/icons/close-button.svg");
+    margin-left:auto;
+    align-self: end;
+}
+.open-menu .buttons{
+    margin:auto;
+}
+.buttons .btn{
+    color: #fff;
+    font-size: 2rem;
+    border-radius:0;
+    border: none;
+}
+.buttons .btn:hover, .buttons .btn:focus{
+color: #fff;
+}
+.buttons .btn:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.content-section{
+    background-color: #fdfdfc;
+}
 .content{
     padding-block: 2rem;
     background-color: #fdfdfc;
 }
 .purpose-section{
     text-align: center;
-}
-.purpose-title, .textarea-title, .textarea-text span, .purpose-text span, .contact-title{
-    font-family: "adobeArabic", serif;
-    color: #2f4c8e;
-}
-.purpose-text, .textarea-text, .contact-text{
-    font-family: "futuraPT", serif;
-    color: #474747;
 }
 .purpose-title{
     font-size: 2.2rem;
@@ -166,4 +205,105 @@ font-size: 0.9rem;
 .full-logo{
     width:13rem;
     margin:1rem auto;
+}
+.contact-modal{
+    display:none;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    min-height:100%;
+    top: 0;
+    left: 0;
+    padding: 5rem;
+    z-index: 2;
+}
+.contact-modal.open{
+    display: block;
+}
+.close-button{
+    background-image: url("./assets/icons/close-button-dark.svg");
+    height: 1.5rem;
+    width:  1.5rem;
+    background-repeat: no-repeat;
+    background-size:  1.5rem  1.5rem;
+    float: right;
+}
+.close-button:focus,.close-button:hover{
+    border-color: #fff;
+    outline: 0;
+}
+.contact-modal-content{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    gap:10rem;
+    max-width:55rem;
+    margin: auto;
+    margin-block: 1rem;
+}
+.logo-info{
+}
+.logo-info .full-logo{
+    margin-inline: 0;
+    width: 16rem;
+}
+.info{
+    line-height:1.2;
+}
+.form-group .text{
+    margin:0;
+}
+.form-group{
+    margin-block: 1rem;
+}
+.form-group label{
+    font-size: 0.9rem;
+}
+input.form-control::placeholder,textarea.form-control::placeholder,.form-group .text{
+    font-size: 1.3rem;
+    color: #a2a2a1;
+}
+input.form-control, textarea.form-control{
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid #d6d6d5;
+    padding: 0 0 0.25rem;
+}
+input.form-control:focus,  textarea.form-control:focus {
+    box-shadow: none;
+    border-color: #2f4c8e;
+}
+textarea.form-control{
+    resize: none;
+    padding-bottom: 1rem;
+}
+div.form-check{
+    display:inline-block;
+    margin-right: 1rem;
+
+}
+input.form-check-input:checked  {
+    background-color: #fff;
+    box-shadow: none;
+    border: 1px solid #2f4c8e;
+background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='%232f4c8e'/></svg>")!important
+}
+input.form-check-input:checked +label {
+    color: #2f4c8e;
+}
+@media screen and (max-width:767px) {
+    .contact-modal{
+        padding: 2rem;
+    }
+    .contact-modal-content{
+        flex-direction: column-reverse;
+        gap:0;
+    }
+    .text-image-section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:1rem;
+    }
 }
