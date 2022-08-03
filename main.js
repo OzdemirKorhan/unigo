@@ -6,11 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   openModal.addEventListener("click", function() {
     modal.classList.add("open");  })
-    document.body.style.overflow = 'hidden';
 
     closeButton.addEventListener("click", function() {
     modal.classList.remove("open");
-        document.body.style.overflow = 'scroll';
   })
 
     document.querySelector(".navbar .menu").addEventListener("click", function() {
