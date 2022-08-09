@@ -300,6 +300,9 @@ input.form-check-input:checked +label {
 }
 .fader{
     opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.8s ease-in-out;
+
 }
 @media screen and (max-width:767px) {
     .contact-modal{

@@ -9,7 +9,10 @@ $(window).on("load",function() {
 
             /* If the element is completely within bounds of the window, fader it in */
             if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-                if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
+                if ($(this).css("opacity")==0) {
+                    $(this).css({'transform' : 'translateY(0)'});
+                    $(this).fadeTo(800,1);
+                }
             }
         });
     }).scroll(); //invoke scroll-handler on page-load
