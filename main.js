@@ -1,4 +1,19 @@
 // write a function that opens and closes a modal
+$(window).on("load",function() {
+    console.log("window loaded");
+    $(window).scroll(function() {
+        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+        $(".fader").each(function() {
+            /* Check the location of each desired element */
+            var objectBottom = $(this).offset().top +50;
+
+            /* If the element is completely within bounds of the window, fader it in */
+            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
+            }
+        });
+    }).scroll(); //invoke scroll-handler on page-load
+});
 document.addEventListener("DOMContentLoaded", function() {
   const modal = document.querySelector(".contact-modal");
   const openModal = document.querySelector(".contact-section .contact-button");
