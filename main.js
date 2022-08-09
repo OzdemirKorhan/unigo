@@ -20,10 +20,14 @@ document.addEventListener("DOMContentLoaded", function() {
   const closeButton = document.querySelector(".contact-modal .close-button");
 
   openModal.addEventListener("click", function() {
-    modal.classList.add("open");  })
+    modal.classList.add("open");
+      document.body.style.overflow = "hidden";
+  })
+
 
     closeButton.addEventListener("click", function() {
     modal.classList.remove("open");
+        document.body.style.overflow = "scroll";
   })
 
     document.querySelector(".navbar .menu").addEventListener("click", function() {
