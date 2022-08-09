@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: "adobeArabic";
     src: url("./assets/fonts/AdobeArabic-Regular.otf");
@@ -95,10 +97,10 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 0.7;
 }
 .hero-text > h2{
-  font-size:3rem;
+    font-size:3rem;
 }
 .hero-text > h1{
-  font-size:4.5rem;
+    font-size:4.5rem;
 }
 .open-menu{
     background-color: rgba(17,71,127,0.6);
@@ -125,7 +127,7 @@ p, h1, h2, h3, h4, h5, h6 {
     border: none;
 }
 .buttons .btn:hover, .buttons .btn:focus{
-color: #fff;
+    color: #fff;
 }
 .buttons .btn:not(:last-child){
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
@@ -184,7 +186,7 @@ color: #fff;
     text-align: center;
 }
 .contact-section .purpose-text{
-font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 .btn.contact-button{
     color: #fff;
@@ -287,10 +289,13 @@ input.form-check-input:checked  {
     background-color: #fff;
     box-shadow: none;
     border: 1px solid #2f4c8e;
-background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='%232f4c8e'/></svg>")!important
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='%232f4c8e'/></svg>")!important
 }
 input.form-check-input:checked +label {
     color: #2f4c8e;
+}
+.fader{
+    opacity: 0;
 }
 @media screen and (max-width:767px) {
     .contact-modal{
