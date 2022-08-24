@@ -165,6 +165,7 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-block: 1rem;
 }
 .textarea-title{
+    text-align: justify;
     font-size: 1.25rem;
     line-height:1;
 }
@@ -174,6 +175,7 @@ p, h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1.2px;
 }
 .textarea-text{
+    text-align: justify;
     font-size: 0.9rem;
     line-height:1.2;
 }
