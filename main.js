@@ -57,5 +57,20 @@ document.addEventListener("DOMContentLoaded", function() {
             sectionElement.scrollIntoView({behavior: "smooth"});
         })
     })
+
+
+    document.querySelector(".send-button").addEventListener("click", function(e) {
+        e.preventDefault();
+        console.log("test")
+        const list = document.getElementsByClassName("form-control");
+        let valid = true;
+
+        for(let el of list){
+            if(el.value === "" || el.value === null) {
+                el.classList.add("red-border");
+                valid = false;
+            }
+        }
+    })
 });
 

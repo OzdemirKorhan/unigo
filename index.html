@@ -108,24 +108,28 @@
         <h2 class="title">Contact Details</h2>
         <div class="first-section">
             <div class="form-group">
-                <label for="student-info">Name and email of student</label>
-                <input type="text" class="form-control" id="student-info" placeholder="Name and email of student">
+                <label for="student-info">Name</label>
+                <input type="text" class="form-control " onfocus="this.classList.remove('red-border')" id="student-info" placeholder="">
             </div>
             <div class="form-group">
-                <label for="parent-info">Name, phone and email of parent contact</label>
-                <input type="text" class="form-control" id="parent-info" placeholder="Name, phone and email of parent contact
-">
+                <label for="parent-info">Phone Number or Email</label>
+                <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="parent-info" placeholder="">
             </div>
             <div class="form-group">
-                <label for="nationality">Nationality of student</label>
-                <input type="text" class="form-control" id="nationality" placeholder="Nationality of student">
+                <label for="nationality">If student, name and contact details of parent/s:</label>
+                <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="nationality" placeholder="">
             </div>
         </div>
         <div class="second-section mt-5">
-            <h2 class="title">Schools/University </h2>
             <div class="form-group">
-                <textarea class="form-control" id="schools" placeholder="If you are aiming for specific schools or universities, please list them here."></textarea>
+                <label for="referee">Please write here the name of your referee</label>
+                <textarea class="form-control" onfocus="this.classList.remove('red-border')" id="referee" placeholder=""></textarea>
             </div>
+            <div class="form-group">
+                <label for="enquiry">Please describe here the nature of your enquiry.</label>
+                <textarea class="form-control" onfocus="this.classList.remove('red-border')" id="enquiry" placeholder=""></textarea>
+            </div>
+           <!--
             <div class="form-group">
                 <p class="text">Are you aware of the tuition fees of the above educational establishments ?</p>
                 <div class="form-check">
@@ -156,10 +160,10 @@
                        No
                     </label>
                 </div>
-            </div>
+            </div> -->
 
         </div>
-        <button type="submit" class="btn contact-button">Send</button>
+        <button class="btn contact-button send-button">Send</button>
     </form>
 </div></div>
 </body>
