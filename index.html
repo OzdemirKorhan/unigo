@@ -102,69 +102,125 @@
 <div class="contact-modal-content">
     <div class="logo-info">
         <img src="./assets/img/full-logo.png" class="full-logo" alt="logo">
-        <p class="info">London Street 34, 8573 London <br>
+        <p class="info">
             info@unigoconsult.com<br>
             +90 444 00 44</p>
     </div>
     <form action="" class="contact-form  pt-3">
+        <div class="form-group">
+            <p class="text">Please choose the applicant type.</p>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="student-section" checked>
+                <label class="form-check-label" for="student-section">
+                    Student
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="organisation-section" >
+                <label class="form-check-label" for="organisation-section">
+                    Organisation
+                </label>
+            </div>
+        </div>
         <h2 class="title">Contact Details</h2>
+        <p class="subtitle d-none warning-text">*Please fill all the necessary fields</p>
         <div class="first-section">
             <div class="form-group">
-                <label for="student-info">Name</label>
-                <input type="text" class="form-control " onfocus="this.classList.remove('red-border')" id="student-info" placeholder="">
+                <label for="name">Name</label>
+                <input type="text" class="form-control " onfocus="this.classList.remove('red-border')" id="name" placeholder="">
             </div>
             <div class="form-group">
-                <label for="parent-info">Phone Number or Email</label>
+                <label for="email">E-mail</label>
+                <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="email" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="phone">Tel</label>
+                <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="phone" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="parent-info">Parent's Contact Detail</label>
                 <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="parent-info" placeholder="">
+            </div><div class="form-group">
+                <label for="school-info">Name of Current School/University</label>
+                <input type="text" class="form-control " onfocus="this.classList.remove('red-border')" id="school-info" placeholder="">
             </div>
             <div class="form-group">
-                <label for="nationality">If student, name and contact details of parent/s:</label>
-                <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="nationality" placeholder="">
-            </div>
-        </div>
-        <div class="second-section mt-5">
-            <div class="form-group">
-                <label for="referee">Please write here the name of your referee</label>
-                <textarea class="form-control" onfocus="this.classList.remove('red-border')" id="referee" placeholder=""></textarea>
+                <label for="grade-year">Grade/Year</label>
+                <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="grade-year" placeholder="">
             </div>
             <div class="form-group">
-                <label for="enquiry">Please describe here the nature of your enquiry.</label>
+                <label for="referee">Name of Referee</label>
+                <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="referee" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="enquiry">Please give a short description of your enquiry.</label>
                 <textarea class="form-control" onfocus="this.classList.remove('red-border')" id="enquiry" placeholder=""></textarea>
             </div>
-           <!--
+        </div>
+        <div class="second-section d-none">
             <div class="form-group">
-                <p class="text">Are you aware of the tuition fees of the above educational establishments ?</p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Yes
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                       No
-                    </label>
-                </div>
+                <label for="name-org">Name</label>
+                <input type="text" class="form-control " onfocus="this.classList.remove('red-border')" id="name-org" placeholder="">
             </div>
             <div class="form-group">
-                <p class="text">Are you able to cover the full cost of tuition ?</p>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault3">
-                    <label class="form-check-label" for="flexRadioDefault3">
-                        Yes
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault4" checked>
-                    <label class="form-check-label" for="flexRadioDefault4">
-                       No
-                    </label>
-                </div>
-            </div> -->
-
+                <label for="email-org">E-mail</label>
+                <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="email-org" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="phone-org">Tel</label>
+                <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="phone-org" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="website-org">Website</label>
+                <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="website-org" placeholder="">
+            </div><div class="form-group">
+                <label for="location-org">Location</label>
+                <input type="text" class="form-control " onfocus="this.classList.remove('red-border')" id="location-org" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="referee-org">Name of Referee</label>
+                <input type="text" class="form-control" onfocus="this.classList.remove('red-border')" id="referee-org" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="enquiry-org">Please give a short description of your enquiry.</label>
+                <textarea class="form-control" onfocus="this.classList.remove('red-border')" id="enquiry-org" placeholder=""></textarea>
+            </div>
         </div>
+        <!--<div class="second-section mt-5">
+
+           <div class="form-group">
+               <p class="text">Are you aware of the tuition fees of the above educational establishments ?</p>
+               <div class="form-check">
+                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                   <label class="form-check-label" for="flexRadioDefault1">
+                       Yes
+                   </label>
+               </div>
+               <div class="form-check">
+                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                   <label class="form-check-label" for="flexRadioDefault2">
+                      No
+                   </label>
+               </div>
+           </div>
+           <div class="form-group">
+               <p class="text">Are you able to cover the full cost of tuition ?</p>
+
+               <div class="form-check">
+                   <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault3">
+                   <label class="form-check-label" for="flexRadioDefault3">
+                       Yes
+                   </label>
+               </div>
+               <div class="form-check">
+                   <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault4" checked>
+                   <label class="form-check-label" for="flexRadioDefault4">
+                      No
+                   </label>
+               </div>
+           </div>
+        </div> -->
         <button class="btn contact-button send-button">Send</button>
     </form>
 </div></div>

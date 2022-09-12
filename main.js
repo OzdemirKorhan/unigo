@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelector(".send-button").addEventListener("click", function(e) {
         e.preventDefault();
-        console.log("test")
+        document.querySelector(".warning-text").classList.add("d-none");
         const list = document.getElementsByClassName("form-control");
         let valid = true;
 
@@ -71,6 +71,28 @@ document.addEventListener("DOMContentLoaded", function() {
                 valid = false;
             }
         }
+        if(!valid) {
+            document.querySelector(".warning-text").classList.remove("d-none");
+        }
     })
+
+    document.querySelectorAll(".form-check-input").forEach(function(input) {
+        input.addEventListener("click", function() {
+        document.querySelector(".warning-text").classList.add("d-none");
+
+        const list = document.getElementsByClassName("form-control");
+        for(let el of list){
+                el.classList.remove("red-border");
+                }
+        if(document.querySelector("#student-section").checked) {
+            document.querySelector(".first-section").classList.remove("d-none");
+            document.querySelector(".second-section").classList.add("d-none");
+        }
+        if(document.querySelector("#organisation-section").checked) {
+            document.querySelector(".second-section").classList.remove("d-none");
+            document.querySelector(".first-section").classList.add("d-none");
+        }
+                })
+            })
 });
 

@@ -263,6 +263,9 @@ p, h1, h2, h3, h4, h5, h6 {
 .info{
     line-height:1.2;
 }
+.warning-text{
+    color: #dc3545
+}
 .form-group .text{
     margin:0;
 }
